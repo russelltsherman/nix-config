@@ -67,8 +67,13 @@
       programs = {
         alacritty = (import ./../alacritty { inherit pkgs; });
         autojump = (import ./../autojump { inherit pkgs; });
+        bash = (import ./../bash { inherit pkgs; });
+        bat = (import ./../bat { inherit pkgs; });
+        # beets = (import ./../beets { inherit pkgs; });
         broot = (import ./../broot { inherit pkgs; });
         browserpass = (import ./../browserpass { inherit pkgs; });
+        # chromium = (import ./../chromium { inherit pkgs; });
+        command-not-found = (import ./../command-not-found { inherit pkgs; });
         dircolors = (import ./../dircolors { inherit pkgs; });
         direnv = (import ./../direnv { inherit pkgs; });
         exa = (import ./../exa { inherit pkgs; });

@@ -3,8 +3,9 @@
 {
     enable = true;
     browsers = [ 
-        "chrome"
-        "firefox" 
+      "chrome" 
+      "chromium" 
+      "firefox" 
+      "vivaldi" 
     ];
-
 }
