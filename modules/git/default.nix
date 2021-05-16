@@ -160,7 +160,7 @@
     {
       # reference different user config for repos in github.com/opsbot directory
       path = "/Users/russellsherman/src/github.com/opsbot/.gitconfig";
-      condition = "gitdir:/Users/russellsherman/src/github.com/unionpos/";
+      condition = "gitdir:/Users/russellsherman/src/github.com/opsbot/";
     }
     {
       # reference different user config for repos in gitlab.com/bhco directory
