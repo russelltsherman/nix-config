@@ -13,7 +13,6 @@
   extraPython3Packages = ps: with ps; [
     python-language-server
   ];
-  extraPythonPackages = ps: [];
   plugins = with pkgs.vimPlugins; [
     # yankring
     # vim-nix
@@ -25,7 +24,6 @@
   vimAlias = false;
   vimdiffAlias = false;
   withNodeJs = false;
-  withPython = true;
   withPython3 = true;
   withRuby = false;
 
