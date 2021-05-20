@@ -1,4 +1,7 @@
 { pkgs, ... }:
+let
+  skaffold = pkgs.callPackage /config/pkgs/skaffold {};
+in
 
 with pkgs; [ 
   _1password
