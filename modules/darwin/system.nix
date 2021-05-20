@@ -13,7 +13,7 @@
           _FXShowPosixPathInTitle = true;
           FXEnableExtensionChangeWarning = false;
       };
-      screencapture.location = "/tmp";
+      screencapture.location = "~/Dropbox/Screenshots";
       trackpad = {
           Clicking = true;
           TrackpadThreeFingerDrag = true;
