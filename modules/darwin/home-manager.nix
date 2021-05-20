@@ -14,7 +14,7 @@
         packages = (import ./user-packages.nix { inherit pkgs; });
         sessionVariables = {
           PAGER = "less -R";
-          EDITOR = "emacsclient";
+          EDITOR = "vi";
         };
       };
       programs = {
