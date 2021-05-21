@@ -4,51 +4,91 @@
 
   enable = true;
   extensions = with pkgs.vscode-extensions; [
-    # amazonwebservices.aws-toolkit-vscode
-    mikestead.dotenv
-    bbenoist.Nix
-    # bradymholt.pgformatter
-    # budparr.language-hugo-vscode
-    # bungcip.better-toml
-    # CoenraadS.bracket-pair-colorizer
-    # coolbear.systemd-unit-file
-    # cssho.vscode-svgviewer
-    # DavidAnson.vscode-markdownlint
-    # DavidWang.ini-for-vscode
-    # dbaeumer.vscode-eslint
-    # dunstontc.viml
-    # eamodio.gitlens
-    # EditorConfig.EditorConfig
-    # esbenp.prettier-vscode
-    # formulahendry.auto-close-tag
-    # ginfuru.ginfuru-better-solarized-dark-theme
+    jock.svg
     golang.Go
-    # heptio.jsonnet
-    # HookyQR.beautify
-    # huizhou.githd
-    # idleberg.applescript
-    # JPTarquino.postgresql
-    # marcostazi.VS-code-vagrantfile
-    # mark-tucker.aws-cli-configure
-    # ms-azuretools.vscode-docker
-    ms-kubernetes-tools.vscode-kubernetes-tools
-    # ms-toolsai.jupyter
-    # msjsdiag.debugger-for-chrome
-    # PKief.material-icon-theme
-    # redhat.vscode-yaml
-    # ritwickdey.LiveServer
-    # timonwong.shellcheck
-    # tomoki1207.pdf
-    # tomphilbin.gruvbox-themes
-    # vscoss.vscode-ansible
-    hashicorp.terraform
-    WakaTime.vscode-wakatime
-    # wholroyd.HCL
+    redhat.java
+    bbenoist.Nix
+    vscodevim.vim
     wholroyd.jinja
-    # wingrunr21.vscode-ruby
-    # xabikos.JavaScriptSnippets
+    tomoki1207.pdf
+    rubbersheep.gi
+    spywhere.guides
+    haskell.haskell
+    eamodio.gitlens
+    cmschuetz12.wal
+    scalameta.metals
+    scala-lang.scala
+    mikestead.dotenv
+    hookyqr.beautify
+    dhall.dhall-lang
+    xyz.local-history
+    tyriar.sort-lines
+    serayuzgur.crates
     xaver.clang-format
-    # zxh404.vscode-proto3
+    redhat.vscode-yaml
+    jnoortheen.nix-ide
+    dotjoshjohnson.xml
+    antfu.icons-carbon
+    a5huynh.vscode-ron
+    skyapps.fish-vscode
+    ryu1kn.partial-diff
+    hashicorp.terraform
+    usernamehw.errorlens
+    timonwong.shellcheck
+    ibm.output-colorizer
+    matklad.rust-analyzer
+    gruntfuggly.todo-tree
+    freebroccolo.reasonml
+    file-icons.file-icons
+    alygin.vscode-tlaplus
+    graphql.vscode-graphql
+    esbenp.prettier-vscode
+    dbaeumer.vscode-eslint
+    codezombiech.gitignore
+    tamasfe.even-better-toml
+    ocamllabs.ocaml-platform
+    naumovs.color-highlight
+    mskelton.one-dark-theme
+    ms-python.vscode-pylance
+    mechatroner.rainbow-csv
+    james-yu.latex-workshop
+    iciclesoft.workspacesort
+    elmtooling.elm-ls-vscode
+    donjayamanne.githistory
+    baccata.scaladex-search
+    alanz.vscode-hie-server
+    WakaTime.vscode-wakatime
+    zhuangtongfa.material-theme
+    yzhang.markdown-all-in-one
+    vincaslt.highlight-matching-tag
+    streetsidesoftware.code-spell-checker
+    slevesque.vscode-multiclip
+    shyykoserhiy.vscode-spotify
+    rubymaniac.vscode-paste-and-indent
+    pkief.material-icon-theme
+    msjsdiag.debugger-for-chrome
+    ms-vscode-remote.remote-ssh
+    ms-kubernetes-tools.vscode-kubernetes-tools
+    ms-azuretools.vscode-docker
+    mishkinf.goto-next-previous-member
+    justusadam.language-haskell
+    jpoissonnier.vscode-styled-components
+    github.vscode-pull-request-github
+    github.github-vscode-theme
+    foxundermoon.shell-format
+    formulahendry.code-runner
+    formulahendry.auto-rename-tag
+    formulahendry.auto-close-tag
+    emmanuelbeziat.vscode-great-icons
+    edonet.vscode-command-runner
+    editorconfig.editorconfig
+    dracula-theme.theme-dracula
+    dhall.vscode-dhall-lsp-server
+    davidanson.vscode-markdownlint
+    coenraads.bracket-pair-colorizer-2
+    brettm12345.nixfmt-vscode
+    alexdima.copy-relative-path
+    CoenraadS.bracket-pair-colorizer
   ];
   keybindings = [
     # {
