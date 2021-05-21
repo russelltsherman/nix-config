@@ -28,7 +28,7 @@ with pkgs; [
   hugo
   jq
   ncdu
-  nixops
+  # nixops
   nix-prefetch-git
   nmap
   nodejs
