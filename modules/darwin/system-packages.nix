@@ -27,6 +27,7 @@ with pkgs; [
   htop
   hugo
   jq
+  ncdu
   nixops
   nix-prefetch-git
   nmap
