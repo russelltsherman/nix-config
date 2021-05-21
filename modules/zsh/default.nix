@@ -90,6 +90,13 @@ in
       LC_COLLATE=$ORIG_COLLATE
     fi
 
+    # nix update function
+    nixup() {
+        nix upgrade-nix
+        nix-channel --update
+        NIXPKGS_ALLOW_UNFREE=1 /run/current-system/sw/bin/darwin-rebuild switch -I darwin-config=/config/hosts/phoenix/config.nix    
+    }
+
   '' + extraInitExtra;
   initExtraBeforeCompInit = ''
   '';
