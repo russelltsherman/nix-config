@@ -17,7 +17,7 @@
     #   credentials = "Org/First Last/cf31f287-ee9e-43a8-843e-e8bbd5de4294";
     # };
   };
-  dataLocation = "\$XDG_DATA_HOME/task";
+  # dataLocation = "~/.data/task";
   extraConfig = ''
   '';
 
