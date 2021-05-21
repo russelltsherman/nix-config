@@ -51,6 +51,9 @@ in
 
     # if user has a home bin directory add it to the path
     [ -d "$HOME/bin" ] && export PATH="$HOME/bin:$PATH"
+
+    # if user has a home .local/bin directory add it to the path
+    [ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
   '';
   history = {
     extended = true;
