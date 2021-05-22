@@ -93,9 +93,6 @@
     init = {
       defaultBranch = "main";
     };
-    github = {
-      user = "russelltsherman";
-    };
     pull = {
       rebase = true;
     };
@@ -178,12 +175,5 @@
     skipSmudge = false;
   };
   package = pkgs.gitFull;
-  signing = {
-    key = "0x1E80E57DFCB96229";
-    gpgPath = "gpg";
-    signByDefault = false;
-  };
-  userEmail = "russell.t.sherman@gmail.com";
-  userName = "Russell Sherman";
 }
 
