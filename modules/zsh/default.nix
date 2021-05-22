@@ -95,7 +95,7 @@ in
       ( cd /config; git stash; git pull; git stash apply )
       nix upgrade-nix
       nix-channel --update
-      NIXPKGS_ALLOW_UNFREE=1 /run/current-system/sw/bin/darwin-rebuild switch -I darwin-config=/config/hosts/phoenix/config.nix    
+      NIXPKGS_ALLOW_UNFREE=1 /run/current-system/sw/bin/darwin-rebuild switch -I darwin-config=/config/hosts/$(hostname)/config.nix    
     }
   '' + extraInitExtra;
   initExtraBeforeCompInit = ''
