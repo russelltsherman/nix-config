@@ -143,6 +143,9 @@
     "# ignore vscode project config"
     ".vscode/*"
 
+    "# ignore .history cache"
+    ".history/*"
+
     "# ignore TODO files"
     "TODO*"
     "NOTE* "
