@@ -27,5 +27,17 @@
       };
     };
   };
+
+  users = {
+    users = {
+      russellsherman = {
+        packages = [];
+        createHome = true;
+        home = builtins.getEnv("HOME");
+        shell = pkgs.zsh;
+      };
+    };
+  };
+
   # services.spacebar.config.space_icon_strip = "    ";
 }
