@@ -30,7 +30,56 @@
       fish
       zsh 
     ];
-    systemPackages = (import ./system-packages.nix { inherit pkgs; });
+    systemPackages = with pkgs; [ 
+      ack
+      antibody
+      aspell
+      aspellDicts.en
+      aspellDicts.en-computers
+      bat
+      bc
+      bind
+      coreutils
+      clang
+      curl 
+      findutils
+      fish
+      fontconfig
+      fzf
+      graphviz
+      gawk
+      # gcc 
+      gnugrep
+      gnumake
+      gnupg
+      gnused
+      htop
+      hugo
+      jq
+      ncdu
+      # nixops
+      nix-prefetch-git
+      nmap
+      nodejs
+      oathToolkit
+      pinentry_mac
+      pv
+      python3Full
+      ripgrep
+      rsync
+      ruby_3_0
+      screen
+      sshpass
+      tldr
+      tree
+      unzip
+      vim
+      wget
+      which
+      yarn
+      yq
+      zsh 
+    ];
     systemPath = [];
     userLaunchAgents = {};
     variables = {};
@@ -48,7 +97,78 @@
       roboto-mono 
     ];
   };
-  home-manager = (import ./home-manager.nix { inherit config pkgs; });
+  home-manager = {
+    users = {
+      russellsherman = {
+        accounts.email.accounts = {};
+        dconf.settings = {};
+        fonts.fontconfig.enable = true;
+        home = {
+          activation = {};
+          enableDebugInfo = true;
+          extraOutputsToInstall = [ "doc" "info" "devdoc" ];
+          file = {};
+          packages = (import ./user-packages.nix { inherit pkgs; });
+          sessionVariables = {
+            PAGER = "less -R";
+            EDITOR = "vi";
+          };
+        };
+        programs = {
+          alacritty = (import ./../alacritty { inherit pkgs; });
+          autojump = (import ./../autojump { inherit pkgs; });
+          bash = (import ./../bash { inherit pkgs; });
+          bat = (import ./../bat { inherit pkgs; });
+          # beets = (import ./../beets { inherit pkgs; });
+          broot = (import ./../broot { inherit pkgs; });
+          browserpass = (import ./../browserpass { inherit pkgs; });
+          # chromium = (import ./../chromium { inherit pkgs; });
+          command-not-found = (import ./../command-not-found { inherit pkgs; });
+          dircolors = (import ./../dircolors { inherit pkgs; });
+          direnv = (import ./../direnv { inherit pkgs; });
+          exa = (import ./../exa { inherit pkgs; });
+          firefox = (import ./../firefox { inherit config pkgs; });
+          fish = (import ./../fish { inherit pkgs; });
+          fzf = (import ./../fzf { inherit pkgs; });
+          git = (import ./../git { inherit pkgs; });
+          go = (import ./../go { inherit pkgs; });
+          gpg = (import ./../gpg { inherit pkgs; });
+          htop = (import ./../htop { inherit pkgs; });
+          irssi = (import ./../irssi { inherit pkgs; });
+          jq = (import ./../jq { inherit pkgs; });
+          keychain = (import ./../keychain { inherit pkgs; });
+          mcfly = (import ./../mcfly { inherit pkgs; });
+          neomutt = (import ./../neomutt { inherit pkgs; });
+          neovim = (import ./../neovim { inherit pkgs; });
+          newsboat = (import ./../newsboat { inherit pkgs; });
+          pazi = (import ./../pazi { inherit pkgs; });
+          pet = (import ./../pet { inherit pkgs; });
+          readline = (import ./../readline { inherit pkgs; });
+          ssh = (import ./../ssh { inherit pkgs; });
+          taskwarrior = (import ./../taskwarrior { inherit pkgs; });
+          tmux = (import ./../tmux { inherit pkgs; });
+          vscode = (import ./../vscode { inherit pkgs; });
+          zsh = (import ./../zsh { inherit pkgs; });
+        };
+      };
+    };
+  };
+  launchd = {
+    agents = {};
+    daemons = {};
+    envVariables = {};
+    user = {
+      agents = {
+        spacebar = {
+          serviceConfig = {
+            StandardErrorPath = "/tmp/spacebar.err.log";
+            StandardOutPath = "/tmp/spacebar.out.log";
+          };
+        };
+      };
+      envVariables = {};
+    };
+  };
   networking = {
     dns = [
       "1.1.1.1"
@@ -111,8 +231,6 @@
     bash = {
       enable = true;
       enableCompletion = true;
-      interactiveShellInit = ''
-      '';
     };
     fish = {
       enable = true;
@@ -200,14 +318,6 @@
     nix = {
       configureBuildUsers = false;
       nrBuildUsers = 32;
-    };
-    users = {
-      russellsherman = {
-        packages = [];
-        createHome = true;
-        home = builtins.getEnv("HOME");
-        shell = pkgs.zsh;
-      };
     };
   };
 }

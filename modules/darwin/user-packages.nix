@@ -45,10 +45,6 @@ with pkgs; [
   lazygit
   minikube
   open-policy-agent
-  python37
-  python37Packages.pip
-  python37Packages.python-language-server
-  python37Packages.virtualenv
   skaffold
   tasksh
   wakatime
