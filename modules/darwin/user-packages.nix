@@ -51,8 +51,6 @@ with pkgs; [
   python37Packages.virtualenv
   skaffold
   tasksh
-  terraform
-  terragrunt
   wakatime
   watchman
   youtube-dl
